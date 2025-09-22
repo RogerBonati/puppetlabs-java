@@ -57,15 +57,6 @@ class java::params {
         'armv7l'  => 'armhf',
         default   => $facts['os']['architecture']
       }
-      case $facts['os']['release']['major'] {
-        '12', '24.04': {
-          $openjdk = 17
-        }
-        '10', '11', '18.04', '18.10', '19.04', '19.10', '20.04', '22.04': {
-          $openjdk = 11
-        }
-        default: { fail("unsupported release ${facts['os']['release']['major']}") }
-      }
       $java = {
         'jdk' => {
           'package'          => "openjdk-${openjdk}-jdk",
