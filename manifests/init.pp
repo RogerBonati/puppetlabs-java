@@ -42,7 +42,8 @@ class java (
   Optional[Array]                                           $package_options        = undef,
   Optional[String]                                          $java_alternative       = undef,
   Optional[String]                                          $java_alternative_path  = undef,
-  Optional[String]                                          $java_home              = undef
+  Optional[String]                                          $java_home              = undef,
+  Integer 																									$openjdk 								= 17
 ) {
   contain java::params
 
