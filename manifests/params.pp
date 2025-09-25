@@ -64,7 +64,7 @@ class java::params {
         '10', '11', '18.04', '18.10', '19.04', '19.10', '20.04', '22.04': {
           $openjdk = 11
         }
-        default: { fail("unsupported release ${facts['os']['release']['major']}") }
+		    # default: { fail("unsupported release ${facts['os']['release']['major']}") }
       }
       $java = {
         'jdk' => {
